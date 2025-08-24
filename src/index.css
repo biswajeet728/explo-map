@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Explo Travel App Design System - Earthy & Vibrant Travel-Inspired Colors
+All colors MUST be HSL for proper theming.
+*/
+
+@layer base {
+  :root {
+    --background: 45 15% 97%;
+    --foreground: 210 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    /* Travel-inspired primary: Deep teal for exploration */
+    --primary: 185 85% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 185 75% 40%;
+
+    /* Adventure orange for energy and action */
+    --secondary: 25 95% 58%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Nature green for fresh, outdoor vibes */
+    --accent: 145 75% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Muted earth tones */
+    --muted: 45 25% 95%;
+    --muted-foreground: 210 15% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 25% 88%;
+    --input: 45 25% 94%;
+    --ring: 185 85% 25%;
+
+    --radius: 0.75rem;
+
+    /* Travel gradient system */
+    --gradient-primary: linear-gradient(135deg, hsl(185 85% 25%), hsl(185 75% 40%));
+    --gradient-adventure: linear-gradient(135deg, hsl(25 95% 58%), hsl(35 90% 65%));
+    --gradient-nature: linear-gradient(135deg, hsl(145 75% 45%), hsl(165 70% 50%));
+    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 58%), hsl(315 75% 65%));
+    --gradient-ocean: linear-gradient(135deg, hsl(200 100% 70%), hsl(185 85% 25%));
+    
+    /* Shadow system with travel theme */
+    --shadow-travel: 0 10px 25px -5px hsl(185 85% 25% / 0.1);
+    --shadow-adventure: 0 10px 25px -5px hsl(25 95% 58% / 0.15);
+    --shadow-glow: 0 0 40px hsl(185 75% 40% / 0.3);
+
+    /* Animation curves for smooth travel-like motion */
+    --ease-travel: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 25% 8%;
+    --foreground: 45 15% 95%;
+
+    --card: 210 20% 10%;
+    --card-foreground: 45 15% 95%;
+
+    --popover: 210 20% 10%;
+    --popover-foreground: 45 15% 95%;
+
+    --primary: 185 75% 40%;
+    --primary-foreground: 210 25% 8%;
+    --primary-glow: 185 65% 55%;
+
+    --secondary: 25 85% 65%;
+    --secondary-foreground: 210 25% 8%;
+
+    --accent: 145 65% 55%;
+    --accent-foreground: 210 25% 8%;
+
+    --muted: 210 20% 15%;
+    --muted-foreground: 45 15% 65%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 15% 95%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 15%;
+    --ring: 185 75% 40%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(185 75% 40%), hsl(185 65% 55%));
+    --gradient-adventure: linear-gradient(135deg, hsl(25 85% 65%), hsl(35 80% 70%));
+    --gradient-nature: linear-gradient(135deg, hsl(145 65% 55%), hsl(165 60% 60%));
+    --shadow-travel: 0 10px 25px -5px hsl(185 75% 40% / 0.2);
+    --shadow-adventure: 0 10px 25px -5px hsl(25 85% 65% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Travel-themed utility classes */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-adventure {
+    background: var(--gradient-adventure);
+  }
+  
+  .gradient-nature {
+    background: var(--gradient-nature);
+  }
+  
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .shadow-travel {
+    box-shadow: var(--shadow-travel);
+  }
+  
+  .shadow-adventure {
+    box-shadow: var(--shadow-adventure);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s var(--ease-travel);
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s var(--ease-travel);
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.6s var(--ease-bounce);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
